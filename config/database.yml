@@ -1,0 +1,27 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: <%= ENV["DB_POOL"] || 5  %>
+  database: <%= ENV['DB_NAME'] || 'livedemo_dev' %>
+  username: <%= ENV['DB_USER'] || ENV['USER'] %>
+  password: <%= ENV['DB_PASS'] %>
+  host: <%= ENV["DB_HOST"] %>
+  url: <%= ENV['DATABASE_URL'] %> # takes higher precedence than other settings
+
+development:
+  <<: *default
+  database: <%= ENV['DB_NAME'] || 'livedemo_dev' %>
+
+test:
+  <<: *default
+  database: livedemo_test
+
+staging:
+  <<: *default
+  database: livedemo_stag
+  url: <%= ENV['DATABASE_URL'] %>
+
+production:
+  <<: *default
+  database: livedemo_prod
+  url: <%= ENV['DATABASE_URL'] %>
