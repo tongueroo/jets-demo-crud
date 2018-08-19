@@ -1,4 +1,5 @@
 Jets.application.routes.draw do
+  resources :posts
   # Default homepage. This should be replaced.
   root "jets/welcome#index"
 
