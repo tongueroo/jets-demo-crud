@@ -1,5 +1,5 @@
 Jets.application.configure do
-  config.project_name = "livedemo"
+  config.project_name = "crud"
   config.api_generator = false
   # config.prewarm.rate = '30 minutes' # default is '30 minutes'
   # config.prewarm.concurrency = 1 # default is 1

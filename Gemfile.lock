@@ -1,32 +1,4 @@
 GIT
-  remote: https://github.com/tongueroo/jets.git
-  revision: c7bff0b71137e2aa5f0415a3881240481e343f05
-  submodules: true
-  specs:
-    jets (0.5.8)
-      actionpack
-      actionview
-      activerecord
-      activesupport
-      aws-sdk-cloudformation
-      aws-sdk-dynamodb
-      aws-sdk-lambda
-      aws-sdk-s3
-      colorize
-      dotenv
-      gems
-      hashie
-      json
-      kramdown
-      memoist
-      pg (= 0.21)
-      rack
-      railties
-      recursive-open-struct
-      text-table
-      thor
-
-GIT
   remote: https://github.com/tongueroo/webpacker.git
   revision: a8c46614c6757fab65e4d0c47d8203014e7b4ef9
   branch: jets
@@ -67,16 +39,19 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     arel (9.0.0)
     aws-eventstream (1.0.1)
-    aws-partitions (1.100.0)
+    aws-partitions (1.102.0)
     aws-sdk-cloudformation (1.6.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
-    aws-sdk-core (3.24.1)
+    aws-sdk-cloudwatchlogs (1.5.0)
+      aws-sdk-core (~> 3)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-core (3.25.0)
       aws-eventstream (~> 1.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-dynamodb (1.10.0)
+    aws-sdk-dynamodb (1.11.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
     aws-sdk-kms (1.7.0)
@@ -85,7 +60,7 @@ GEM
     aws-sdk-lambda (1.8.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
-    aws-sdk-s3 (1.17.0)
+    aws-sdk-s3 (1.17.1)
       aws-sdk-core (~> 3, >= 3.21.2)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
@@ -110,6 +85,29 @@ GEM
     hashie (3.6.0)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
+    jets (0.7.1)
+      actionpack (>= 5.2.1)
+      actionview (>= 5.2.1)
+      activerecord (>= 5.2.1)
+      activesupport (>= 5.2.1)
+      aws-sdk-cloudformation
+      aws-sdk-cloudwatchlogs
+      aws-sdk-dynamodb
+      aws-sdk-lambda
+      aws-sdk-s3
+      colorize
+      dotenv
+      gems
+      hashie
+      json
+      kramdown
+      memoist
+      pg (= 0.21)
+      rack
+      railties (>= 5.2.1)
+      recursive-open-struct
+      text-table
+      thor
     jmespath (1.4.0)
     json (2.1.0)
     kramdown (1.17.0)
@@ -174,7 +172,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capybara
-  jets!
+  jets
   launchy
   pg (~> 0.21)
   rack
