@@ -122,6 +122,7 @@ GEM
       nokogiri (>= 1.5.9)
     memoist (0.16.0)
     method_source (0.9.0)
+    mimemagic (0.3.2)
     mini_mime (1.0.1)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
@@ -178,6 +179,7 @@ DEPENDENCIES
   capybara
   jets!
   launchy
+  mimemagic
   pg (~> 0.21)
   rack
   rspec
