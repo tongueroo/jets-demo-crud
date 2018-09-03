@@ -8,6 +8,33 @@ GIT
       rack-proxy (>= 0.6.1)
       railties (>= 4.2)
 
+PATH
+  remote: /home/ec2-user/environment/jets
+  specs:
+    jets (0.8.0)
+      actionpack (>= 5.2.1)
+      actionview (>= 5.2.1)
+      activerecord (>= 5.2.1)
+      activesupport (>= 5.2.1)
+      aws-sdk-cloudformation
+      aws-sdk-cloudwatchlogs
+      aws-sdk-dynamodb
+      aws-sdk-lambda
+      aws-sdk-s3
+      colorize
+      dotenv
+      gems
+      hashie
+      json
+      kramdown
+      memoist
+      pg (= 0.21)
+      rack
+      railties (>= 5.2.1)
+      recursive-open-struct
+      text-table
+      thor
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -67,7 +94,7 @@ GEM
     aws-sigv4 (1.0.3)
     builder (3.2.3)
     byebug (10.0.2)
-    capybara (3.6.0)
+    capybara (3.7.0)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -85,29 +112,6 @@ GEM
     hashie (3.6.0)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
-    jets (0.7.1)
-      actionpack (>= 5.2.1)
-      actionview (>= 5.2.1)
-      activerecord (>= 5.2.1)
-      activesupport (>= 5.2.1)
-      aws-sdk-cloudformation
-      aws-sdk-cloudwatchlogs
-      aws-sdk-dynamodb
-      aws-sdk-lambda
-      aws-sdk-s3
-      colorize
-      dotenv
-      gems
-      hashie
-      json
-      kramdown
-      memoist
-      pg (= 0.21)
-      rack
-      railties (>= 5.2.1)
-      recursive-open-struct
-      text-table
-      thor
     jmespath (1.4.0)
     json (2.1.0)
     kramdown (1.17.0)
@@ -172,7 +176,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capybara
-  jets
+  jets!
   launchy
   pg (~> 0.21)
   rack

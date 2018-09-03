@@ -1,6 +1,10 @@
 source "https://rubygems.org"
 
-gem "jets"
+if File.exist?("dev.mode")
+  gem "jets", path: "#{ENV['HOME']}/environment/jets"
+else
+  gem "jets", git: "https://github.com/tongueroo/jets.git", submodules: true, branch: 'log-group-iam-fix'
+end
 
 # Include webpacker if you are you are building html pages
 gem "webpacker", git: "https://github.com/tongueroo/webpacker.git", branch: "jets"
