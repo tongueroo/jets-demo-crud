@@ -8,5 +8,5 @@ Jets.application.routes.draw do
 
   # Required for API Gateway to serve static utf8 content out of public folder.
   # Replace with your own controller to customize.
-  # any "*catchall", to: "jets/public#show"
+  any "*catchall", to: "jets/public#show"
 end

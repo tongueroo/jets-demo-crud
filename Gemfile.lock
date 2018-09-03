@@ -1,15 +1,8 @@
 GIT
-  remote: https://github.com/tongueroo/webpacker.git
-  revision: a8c46614c6757fab65e4d0c47d8203014e7b4ef9
-  branch: jets
-  specs:
-    webpacker (3.2.0)
-      activesupport (>= 4.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 4.2)
-
-PATH
-  remote: /home/ec2-user/environment/jets
+  remote: https://github.com/tongueroo/jets.git
+  revision: fd4568d008b179b26bc58300ee2bac39af3b9c96
+  branch: log-group-iam-fix
+  submodules: true
   specs:
     jets (0.8.0)
       actionpack (>= 5.2.1)
@@ -28,12 +21,23 @@ PATH
       json
       kramdown
       memoist
+      mimemagic
       pg (= 0.21)
       rack
       railties (>= 5.2.1)
       recursive-open-struct
       text-table
       thor
+
+GIT
+  remote: https://github.com/tongueroo/webpacker.git
+  revision: a8c46614c6757fab65e4d0c47d8203014e7b4ef9
+  branch: jets
+  specs:
+    webpacker (3.2.0)
+      activesupport (>= 4.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 4.2)
 
 GEM
   remote: https://rubygems.org/
