@@ -1,34 +1,4 @@
 GIT
-  remote: https://github.com/tongueroo/jets.git
-  revision: c748d70391336dacc3b86ac120489c0bc73effad
-  submodules: true
-  specs:
-    jets (0.8.3)
-      actionpack (>= 5.2.1)
-      actionview (>= 5.2.1)
-      activerecord (>= 5.2.1)
-      activesupport (>= 5.2.1)
-      aws-sdk-cloudformation
-      aws-sdk-cloudwatchlogs
-      aws-sdk-dynamodb
-      aws-sdk-lambda
-      aws-sdk-s3
-      colorize
-      dotenv
-      gems
-      hashie
-      json
-      kramdown
-      memoist
-      mimemagic
-      pg (= 0.21)
-      rack
-      railties (>= 5.2.1)
-      recursive-open-struct
-      text-table
-      thor
-
-GIT
   remote: https://github.com/tongueroo/webpacker.git
   revision: a8c46614c6757fab65e4d0c47d8203014e7b4ef9
   branch: jets
@@ -115,6 +85,30 @@ GEM
     hashie (3.6.0)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
+    jets (0.8.3)
+      actionpack (>= 5.2.1)
+      actionview (>= 5.2.1)
+      activerecord (>= 5.2.1)
+      activesupport (>= 5.2.1)
+      aws-sdk-cloudformation
+      aws-sdk-cloudwatchlogs
+      aws-sdk-dynamodb
+      aws-sdk-lambda
+      aws-sdk-s3
+      colorize
+      dotenv
+      gems
+      hashie
+      json
+      kramdown
+      memoist
+      mimemagic
+      pg (= 0.21)
+      rack
+      railties (>= 5.2.1)
+      recursive-open-struct
+      text-table
+      thor
     jmespath (1.4.0)
     json (2.1.0)
     kramdown (1.17.0)
@@ -180,9 +174,8 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capybara
-  jets!
+  jets
   launchy
-  mimemagic
   pg (~> 0.21)
   rack
   rspec

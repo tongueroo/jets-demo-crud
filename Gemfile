@@ -1,16 +1,16 @@
 source "https://rubygems.org"
 
-if File.exist?("dev.mode")
-  gem "jets", path: "#{ENV['HOME']}/environment/jets"
-else
-  gem "jets", git: "https://github.com/tongueroo/jets.git", submodules: true
-end
+gem "jets"
+# if File.exist?("dev.mode")
+#   gem "jets", path: "#{ENV['HOME']}/environment/jets"
+# else
+#   gem "jets", git: "https://github.com/tongueroo/jets.git", submodules: true
+# end
 
 # Include webpacker if you are you are building html pages
 gem "webpacker", git: "https://github.com/tongueroo/webpacker.git", branch: "jets"
 # Include pg gem if you are using ActiveRecord
 gem "pg", "~> 0.21"
-gem "mimemagic"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
