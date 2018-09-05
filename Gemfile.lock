@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/tongueroo/jets.git
-  revision: c606f8aa054bfd8a18480d00f6bfaba32f5143a1
+  revision: e4d45df3ad577c76bef89458727d9e7b8a52295c
   submodules: true
   specs:
-    jets (0.8.0)
+    jets (0.8.2)
       actionpack (>= 5.2.1)
       actionview (>= 5.2.1)
       activerecord (>= 5.2.1)
