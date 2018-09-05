@@ -1,7 +1,6 @@
 GIT
   remote: https://github.com/tongueroo/jets.git
-  revision: fd4568d008b179b26bc58300ee2bac39af3b9c96
-  branch: log-group-iam-fix
+  revision: c606f8aa054bfd8a18480d00f6bfaba32f5143a1
   submodules: true
   specs:
     jets (0.8.0)

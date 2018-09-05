@@ -1,9 +1,6 @@
 require "rack/mime"
 require "mimemagic"
 
-# Works for utf8 text files.
-# TODO: Add support to public_controller for binary data like images.
-# Tricky because API Gateway is not respecting the Accept header the same way as browsers.
 class FilesController < ApplicationController
   layout false
 
@@ -22,7 +19,7 @@ class FilesController < ApplicationController
       if binary
         encoded_content = Base64.encode64(IO.read(catchall_path))
         # encoded_content = "encoded_content.."
-        render plain: encoded_content, content_type: content_type
+        render plain: encoded_content, content_type: content_type, base64: true
       else
         render file: catchall_path, content_type: content_type
       end

@@ -3,7 +3,7 @@ source "https://rubygems.org"
 if File.exist?("dev.mode")
   gem "jets", path: "#{ENV['HOME']}/environment/jets"
 else
-  gem "jets", git: "https://github.com/tongueroo/jets.git", submodules: true, branch: 'log-group-iam-fix'
+  gem "jets", git: "https://github.com/tongueroo/jets.git", submodules: true
 end
 
 # Include webpacker if you are you are building html pages
