@@ -1,4 +1,34 @@
 GIT
+  remote: https://github.com/tongueroo/jets.git
+  revision: 8aa763a13aafdb659966ded9dcfe010c094da178
+  submodules: true
+  specs:
+    jets (0.8.4)
+      actionpack (>= 5.2.1)
+      actionview (>= 5.2.1)
+      activerecord (>= 5.2.1)
+      activesupport (>= 5.2.1)
+      aws-sdk-cloudformation
+      aws-sdk-cloudwatchlogs
+      aws-sdk-dynamodb
+      aws-sdk-lambda
+      aws-sdk-s3
+      colorize
+      dotenv
+      gems
+      hashie
+      json
+      kramdown
+      memoist
+      mimemagic
+      pg (= 0.21)
+      rack
+      railties (>= 5.2.1)
+      recursive-open-struct
+      text-table
+      thor
+
+GIT
   remote: https://github.com/tongueroo/webpacker.git
   revision: a8c46614c6757fab65e4d0c47d8203014e7b4ef9
   branch: jets
@@ -40,34 +70,34 @@ GEM
     arel (9.0.0)
     aws-eventstream (1.0.1)
     aws-partitions (1.102.0)
-    aws-sdk-cloudformation (1.6.0)
-      aws-sdk-core (~> 3)
+    aws-sdk-cloudformation (1.8.0)
+      aws-sdk-core (~> 3, >= 3.26.0)
       aws-sigv4 (~> 1.0)
-    aws-sdk-cloudwatchlogs (1.5.0)
-      aws-sdk-core (~> 3)
+    aws-sdk-cloudwatchlogs (1.7.0)
+      aws-sdk-core (~> 3, >= 3.26.0)
       aws-sigv4 (~> 1.0)
-    aws-sdk-core (3.25.0)
+    aws-sdk-core (3.27.0)
       aws-eventstream (~> 1.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-dynamodb (1.11.0)
-      aws-sdk-core (~> 3)
+    aws-sdk-dynamodb (1.13.0)
+      aws-sdk-core (~> 3, >= 3.26.0)
       aws-sigv4 (~> 1.0)
-    aws-sdk-kms (1.7.0)
-      aws-sdk-core (~> 3)
+    aws-sdk-kms (1.9.0)
+      aws-sdk-core (~> 3, >= 3.26.0)
       aws-sigv4 (~> 1.0)
-    aws-sdk-lambda (1.8.0)
-      aws-sdk-core (~> 3)
+    aws-sdk-lambda (1.10.0)
+      aws-sdk-core (~> 3, >= 3.26.0)
       aws-sigv4 (~> 1.0)
-    aws-sdk-s3 (1.17.1)
-      aws-sdk-core (~> 3, >= 3.21.2)
+    aws-sdk-s3 (1.19.0)
+      aws-sdk-core (~> 3, >= 3.26.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
     aws-sigv4 (1.0.3)
     builder (3.2.3)
     byebug (10.0.2)
-    capybara (3.7.0)
+    capybara (3.7.1)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -85,30 +115,6 @@ GEM
     hashie (3.6.0)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
-    jets (0.8.3)
-      actionpack (>= 5.2.1)
-      actionview (>= 5.2.1)
-      activerecord (>= 5.2.1)
-      activesupport (>= 5.2.1)
-      aws-sdk-cloudformation
-      aws-sdk-cloudwatchlogs
-      aws-sdk-dynamodb
-      aws-sdk-lambda
-      aws-sdk-s3
-      colorize
-      dotenv
-      gems
-      hashie
-      json
-      kramdown
-      memoist
-      mimemagic
-      pg (= 0.21)
-      rack
-      railties (>= 5.2.1)
-      recursive-open-struct
-      text-table
-      thor
     jmespath (1.4.0)
     json (2.1.0)
     kramdown (1.17.0)
@@ -174,7 +180,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capybara
-  jets
+  jets!
   launchy
   pg (~> 0.21)
   rack
