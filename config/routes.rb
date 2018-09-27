@@ -1,8 +1,6 @@
 Jets.application.routes.draw do
   resources :posts
 
-  get "files/:id", to: "files#show"
-
   # Default homepage. This should be replaced.
   root "jets/public#show"
 
