@@ -6,7 +6,7 @@ Jets.application.configure do
   # config.env_extra = 2 # can also set this with JETS_ENV_EXTRA
   # config.extra_autoload_paths = []
 
-  config.function.timeout = 15
+  config.function.timeout = 30
   # config.function.role = "arn:aws:iam::#{ENV['AWS_ACCOUNT_ID']}:role/service-role/pre-created"
   # config.function.memory_size= 1536
   # config.function.cors = true

@@ -4,8 +4,8 @@ gem "jets"
 
 # Include webpacker if you are you are building html pages
 gem "webpacker", git: "https://github.com/tongueroo/webpacker.git", branch: "jets"
-# Include pg gem if you are using ActiveRecord
-gem "pg", "~> 0.21"
+# Include mysql2 gem if you are using ActiveRecord
+gem "mysql2", "~> 0.5.2"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
