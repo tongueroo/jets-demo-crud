@@ -1,6 +1,6 @@
 Jets.application.configure do
   config.project_name = "crud"
-  config.api_generator = false
+  config.mode = "html"
   # config.prewarm.rate = '30 minutes' # default is '30 minutes'
   # config.prewarm.concurrency = 1 # default is 1
   # config.env_extra = 2 # can also set this with JETS_ENV_EXTRA
