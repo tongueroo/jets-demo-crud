@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :delete]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
   def index
@@ -40,7 +40,7 @@ class PostsController < ApplicationController
   end
 
   # DELETE /posts/1
-  def delete
+  def destroy
     @post.destroy
     if request.xhr?
       render json: {success: true}

@@ -1,22 +1,22 @@
 source "https://rubygems.org"
 
-gem "jets"
+gem "jets", "~> 5.0.8"
 
-# Include webpacker if you are you are building html pages
-gem "webpacker", git: "https://github.com/tongueroo/webpacker.git", branch: "jets"
-# Include mysql2 gem if you are using ActiveRecord
-gem "mysql2", "~> 0.5.2"
+gem "sprockets-jets"
+gem "sassc"
 
+# Use mysql as the database for Active Record
+gem "mysql2", "~> 0.5"
+gem "importmap-jets"
+gem "zeitwerk", ">= 2.6.12"
+
+# development and test groups are not bundled as part of the deployment
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'shotgun'
   gem 'rack'
+  gem 'puma'
 end
 
 group :test do
-  gem 'rspec' # rspec test group only or we get the "irb: warn: can't alias context from irb_context warning" when starting jets console
-  gem 'launchy'
-  gem 'capybara'
+  gem 'rspec'
 end
-gem "dynomite"
