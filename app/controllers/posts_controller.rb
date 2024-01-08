@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: %i[ show edit update destroy ]
 
   # GET /posts
   def index
@@ -24,38 +24,38 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
-      redirect_to "/posts/#{@post.id}"
+      redirect_to @post, notice: "Post was successfully created."
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
-  # PUT /posts/1
+  # PATCH/PUT /posts/1
   def update
     if @post.update(post_params)
-      render json: {success: true, location: url_for("/posts/#{@post.id}")}
+      redirect_to @post, notice: "Post was successfully updated.", status: :see_other
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
   # DELETE /posts/1
   def destroy
     @post.destroy
-    if request.xhr?
-      render json: {success: true}
-    else
-      redirect_to "/posts"
+    respond_to do |format|
+      format.html { redirect_to posts_url, notice: "Post was successfully destroyed.", status: :see_other }
+      format.json { render json: {location: posts_url} }
     end
   end
 
-private
-  # Use callbacks to share common setup or constraints between actions.
-  def set_post
-    @post = Post.find(params[:id])
-  end
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_post
+      @post = Post.find(params[:id])
+    end
 
-  def post_params
-    params.require(:post).permit(:title, :body, :published)
-  end
+    # Only allow a list of trusted parameters through.
+    def post_params
+      params.require(:post).permit(:title, :body, :published)
+    end
 end

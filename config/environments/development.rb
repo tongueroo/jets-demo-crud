@@ -1,4 +1,7 @@
 Jets.application.configure do
+  config.domain.cert_arn = ENV['CERT_ARN']
+  config.domain.hosted_zone_name = "demo.rubyonjets.com" # String
+
   config.enable_reloading = true
   config.eager_load = false
   config.consider_all_requests_local = true
